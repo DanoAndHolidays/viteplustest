@@ -80,7 +80,7 @@ export function Modal({
         onClose();
       }
     },
-    [closeOnOverlay, onClose]
+    [closeOnOverlay, onClose],
   );
 
   if (!isOpen) return null;

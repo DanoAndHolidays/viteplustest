@@ -11,9 +11,7 @@ export function ModalExample() {
 
       <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
         <button onClick={() => setIsOpen(true)}>打开基础 Modal</button>
-        <button onClick={() => setIsCompoundOpen(true)}>
-          打开复合组件 Modal
-        </button>
+        <button onClick={() => setIsCompoundOpen(true)}>打开复合组件 Modal</button>
       </div>
 
       {/* 基础 Modal */}
@@ -56,13 +54,10 @@ export function ModalExample() {
         size="lg"
       >
         <p>
-          这个 Modal 展示了复合组件模式（Compound Components Pattern）。
-          虽然头部和底部通过 props 传入，但内部结构支持解构使用。
+          这个 Modal 展示了复合组件模式（Compound Components Pattern）。 虽然头部和底部通过 props
+          传入，但内部结构支持解构使用。
         </p>
-        <p>
-          复合组件模式的优点是更灵活，可以自定义头部和底部的布局，而不必受限于单一的 API
-          设计。
-        </p>
+        <p>复合组件模式的优点是更灵活，可以自定义头部和底部的布局，而不必受限于单一的 API 设计。</p>
       </Modal>
     </div>
   );

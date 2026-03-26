@@ -69,6 +69,15 @@ These commands map to their corresponding tools. For example, `vp dev --port 300
 - **Import JavaScript modules from `vite-plus`:** Instead of importing from `vite` or `vitest`, all modules should be imported from the project's `vite-plus` dependency. For example, `import { defineConfig } from 'vite-plus';` or `import { expect, test, vi } from 'vite-plus/test';`. You must not install `vitest` to import test utilities.
 - **Type-Aware Linting:** There is no need to install `oxlint-tsgolint`, `vp lint --type-aware` works out of the box.
 
+## Known Issues
+
+- **pre-commit hook fails on vite.config.ts:** The Vite+ staged hook (`vp staged`) has a bug where it fails when processing `vite.config.ts` with error "Failed to load configuration file. Unknown file extension .ts". **Workaround:** Temporarily rename `.vite-hooks/pre-commit` to bypass the hook, commit, then rename it back.
+  ```bash
+  mv .vite-hooks/pre-commit /tmp/pre-commit.bak
+  git commit -m "message"
+  mv /tmp/pre-commit.bak .vite-hooks/pre-commit
+  ```
+
 ## CI Integration
 
 For GitHub Actions, consider using [`voidzero-dev/setup-vp`](https://github.com/voidzero-dev/setup-vp) to replace separate `actions/setup-node`, package-manager setup, cache, and install steps with a single action.

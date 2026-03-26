@@ -5,7 +5,7 @@ import { ChatBubbleTimestamp } from "./ChatBubbleTimestamp";
 import { ChatBubbleActions } from "./ChatBubbleActions";
 import { useI18n } from "../../../i18n";
 import type { ChatBubbleProps, ChatBubbleVariant } from "./types";
-import "./ChatBubble.css";
+import "./ChatBubble.scss";
 
 function CopyButton({ onCopy }: { onCopy?: () => void }) {
   const { t } = useI18n();

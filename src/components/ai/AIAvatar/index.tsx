@@ -1,6 +1,6 @@
 import { useI18n } from "../../../i18n";
 import type { MessageRole } from "../../../types/ai";
-import "./AIAvatar.css";
+import "./AIAvatar.scss";
 
 interface AIAvatarProps {
   role: MessageRole;

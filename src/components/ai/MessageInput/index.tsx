@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import type { KeyboardEvent, ChangeEvent } from "react";
 import { useI18n } from "../../../i18n";
-import "./MessageInput.css";
+import "./MessageInput.scss";
 
 interface MessageInputProps {
   onSend: (message: string) => void;

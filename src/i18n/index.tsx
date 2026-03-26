@@ -47,7 +47,7 @@ interface I18nProviderProps {
   initialLocale?: Locale;
 }
 
-export function I18nProvider({ children, initialLocale = "en" }: I18nProviderProps) {
+export function I18nProvider({ children, initialLocale = "zh" }: I18nProviderProps) {
   const [locale, setLocale] = useState<Locale>(initialLocale);
 
   const t = useCallback(

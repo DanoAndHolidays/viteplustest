@@ -1,5 +1,5 @@
 import { useI18n } from "../../../i18n";
-import "./ThinkingIndicator.css";
+import "./ThinkingIndicator.scss";
 
 interface ThinkingIndicatorProps {
   className?: string;

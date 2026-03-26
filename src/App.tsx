@@ -1,9 +1,9 @@
-import "./style.css";
-import typescriptLogo from "./assets/typescript.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import Counter from "./Counter";
-import { ModalExample } from "./components/ModalExample";
+import "./style.scss";
+// import typescriptLogo from './assets/typescript.svg'
+// import viteLogo from './assets/vite.svg'
+// import heroImg from './assets/hero.png'
+// import Counter from './Counter'
+// import { ModalExample } from './components/ModalExample'
 import { AIDemo } from "./components/ai/AIDemo";
 
 export default function App() {
@@ -13,25 +13,36 @@ export default function App() {
         <div style={{ padding: "2rem 0" }}>
           <AIDemo />
         </div>
-        <div className="hero">
-          <img src={heroImg} className="base" width={170} height={179} alt="" />
-          <img src={typescriptLogo} className="framework" alt="TypeScript logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <Counter />
+        {/* <div className="hero">
+                    <img
+                        src={heroImg}
+                        className="base"
+                        width={170}
+                        height={179}
+                        alt=""
+                    />
+                    <img
+                        src={typescriptLogo}
+                        className="framework"
+                        alt="TypeScript logo"
+                    />
+                    <img src={viteLogo} className="vite" alt="Vite logo" />
+                </div>
+                <div>
+                    <h1>Get started</h1>
+                    <p>
+                        Edit <code>src/App.tsx</code> and save to test{' '}
+                        <code>HMR</code>
+                    </p>
+                </div>
+                <Counter />
 
-        <ModalExample />
+                <ModalExample /> */}
       </section>
 
       <div className="ticks"></div>
 
-      <section id="next-steps">
+      {/* <section id="next-steps">
         <div id="docs">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#documentation-icon" />
@@ -94,10 +105,10 @@ export default function App() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="spacer">test</section>
     </>
   );
 }

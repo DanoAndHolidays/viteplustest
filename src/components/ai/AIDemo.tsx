@@ -3,7 +3,7 @@ import { ChatBubble, ThinkingIndicator, AIAvatar, MessageInput } from "./index";
 import { ChatProvider, useChat, simulateStreamingResponse } from "../../hooks/useChat";
 import { I18nProvider, useI18n } from "../../i18n";
 import type { TextMessage } from "../../types/ai";
-import "./AIDemo.css";
+import "./AIDemo.scss";
 
 const DEMO_RESPONSES = [
   "Hello! I'm an AI assistant. I can help you with various tasks like answering questions, writing code, or just having a conversation. What can I help you with today?",
@@ -57,16 +57,16 @@ function ChatView() {
         <h1 className="ai-demo-title">AI Chat Demo</h1>
         <div className="ai-demo-locale-switch">
           <button
-            className={`locale-btn ${locale === "en" ? "active" : ""}`}
-            onClick={() => setLocale("en")}
-          >
-            EN
-          </button>
-          <button
             className={`locale-btn ${locale === "zh" ? "active" : ""}`}
             onClick={() => setLocale("zh")}
           >
             中文
+          </button>
+          <button
+            className={`locale-btn ${locale === "en" ? "active" : ""}`}
+            onClick={() => setLocale("en")}
+          >
+            EN
           </button>
         </div>
       </header>

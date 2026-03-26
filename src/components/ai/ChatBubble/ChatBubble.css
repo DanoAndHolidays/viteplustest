@@ -1,0 +1,129 @@
+.chat-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  gap: 0.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-bubble-user {
+  align-self: flex-end;
+}
+
+.chat-bubble-assistant {
+  align-self: flex-start;
+}
+
+.chat-bubble-system {
+  align-self: center;
+  opacity: 0.7;
+}
+
+.chat-bubble-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chat-bubble-content {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-bubble-user .chat-bubble-content {
+  background: var(--chat-user-bg, #3b82f6);
+  color: white;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.chat-bubble-assistant .chat-bubble-content {
+  background: var(--chat-assistant-bg, #f3f4f6);
+  color: var(--chat-text, #1f2937);
+  border-bottom-left-radius: 0.25rem;
+}
+
+.chat-bubble-system .chat-bubble-content {
+  background: var(--chat-system-bg, #fef3c7);
+  color: var(--chat-system-text, #92400e);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.chat-bubble-streaming .chat-bubble-content::after {
+  content: "▊";
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  opacity: 0.7;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0.7;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.chat-bubble-timestamp {
+  font-size: 0.75rem;
+  color: var(--chat-timestamp-color, #9ca3af);
+  padding: 0 0.25rem;
+}
+
+.chat-bubble-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.chat-bubble-copy-btn,
+.chat-bubble-retry-btn {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: var(--chat-action-color, #6b7280);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.15s;
+}
+
+.chat-bubble-copy-btn:hover,
+.chat-bubble-retry-btn:hover {
+  background: var(--chat-action-hover-bg, #e5e7eb);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .chat-bubble-assistant .chat-bubble-content {
+    background: var(--chat-assistant-bg-dark, #374151);
+    color: var(--chat-text-dark, #f9fafb);
+  }
+
+  .chat-bubble-system .chat-bubble-content {
+    background: var(--chat-system-bg-dark, #78350f);
+    color: var(--chat-system-text-dark, #fef3c7);
+  }
+
+  .chat-bubble-copy-btn:hover,
+  .chat-bubble-retry-btn:hover {
+    background: var(--chat-action-hover-bg-dark, #4b5563);
+  }
+}

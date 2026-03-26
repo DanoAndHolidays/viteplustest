@@ -1,0 +1,61 @@
+.thinking-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--thinking-bg, #f3f4f6);
+  border-radius: 1rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.thinking-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.thinking-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--thinking-dot-color, #6b7280);
+  border-radius: 50%;
+  animation: thinking-bounce 1.4s infinite ease-in-out both;
+}
+
+.thinking-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.thinking-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.thinking-dot:nth-child(3) {
+  animation-delay: 0;
+}
+
+@keyframes thinking-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.thinking-label {
+  font-size: 0.875rem;
+  color: var(--thinking-text-color, #6b7280);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .thinking-indicator {
+    background: var(--thinking-bg-dark, #374151);
+  }
+
+  .thinking-label {
+    color: var(--thinking-text-color-dark, #9ca3af);
+  }
+}

@@ -26,8 +26,35 @@
 ## 项目架构
 
 这是一个 React 19 + TypeScript 5.9 应用，源代码位于 `src/` 目录：
+
 - `main.tsx` - 应用入口
 - `App.tsx` - 根组件
 - `Counter.tsx` - 示例组件
 - `style.css` - 全局样式
 - `assets/` - 静态资源（hero.png、vite.svg、typescript.svg）
+- `types/ai.ts` - AI 组件库类型定义
+- `i18n/` - 国际化（en/zh）
+- `hooks/` - 自定义 Hooks（useChat, useStreamingText, useTypewriter）
+- `components/ai/` - AI 组件库（ChatBubble, ThinkingIndicator, AIAvatar, MessageInput）
+
+## AI 组件库
+
+本项目正在开发一个 **AI Agent UI 组件库**，专注于对话式 AI 交互界面。
+
+详细设计文档参见 [AGENTS.md](./AGENTS.md#ai-agent-ui-组件库)。
+
+### 技术栈
+
+- React Compound Components 模式
+- Context + useReducer 状态管理
+- 纯 CSS 变量 + Dark Mode
+- 完整 TypeScript 类型
+
+### 组件列表
+
+| 组件              | 说明                   | 状态 |
+| ----------------- | ---------------------- | ---- |
+| ChatBubble        | 消息气泡，支持流式输出 | ✅   |
+| ThinkingIndicator | AI 思考动画            | ✅   |
+| AIAvatar          | 头像组件               | ✅   |
+| MessageInput      | 输入框                 | ✅   |

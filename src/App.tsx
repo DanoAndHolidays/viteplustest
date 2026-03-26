@@ -4,11 +4,15 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import Counter from "./Counter";
 import { ModalExample } from "./components/ModalExample";
+import { AIDemo } from "./components/ai/AIDemo";
 
 export default function App() {
   return (
     <>
       <section id="center">
+        <div style={{ padding: "2rem 0" }}>
+          <AIDemo />
+        </div>
         <div className="hero">
           <img src={heroImg} className="base" width={170} height={179} alt="" />
           <img src={typescriptLogo} className="framework" alt="TypeScript logo" />
@@ -22,7 +26,7 @@ export default function App() {
         </div>
         <Counter />
 
-      <ModalExample />
+        <ModalExample />
       </section>
 
       <div className="ticks"></div>

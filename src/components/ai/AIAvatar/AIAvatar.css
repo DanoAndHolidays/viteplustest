@@ -1,0 +1,90 @@
+.ai-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ai-avatar-sm {
+  width: 28px;
+  height: 28px;
+  font-size: 0.875rem;
+}
+
+.ai-avatar-md {
+  width: 36px;
+  height: 36px;
+  font-size: 1.125rem;
+}
+
+.ai-avatar-lg {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+}
+
+.ai-avatar-user {
+  background: var(--avatar-user-bg, #dbeafe);
+}
+
+.ai-avatar-assistant {
+  background: var(--avatar-assistant-bg, #d1fae5);
+}
+
+.ai-avatar-system {
+  background: var(--avatar-system-bg, #fef3c7);
+}
+
+.ai-avatar-icon {
+  line-height: 1;
+}
+
+.ai-avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.ai-avatar-status-online {
+  background: #10b981;
+}
+
+.ai-avatar-status-offline {
+  background: #6b7280;
+}
+
+.ai-avatar-status-thinking {
+  background: #f59e0b;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .ai-avatar-user {
+    background: var(--avatar-user-bg-dark, #1e3a5f);
+  }
+
+  .ai-avatar-assistant {
+    background: var(--avatar-assistant-bg-dark, #064e3b);
+  }
+
+  .ai-avatar-system {
+    background: var(--avatar-system-bg-dark, #78350f);
+  }
+}
